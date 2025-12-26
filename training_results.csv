@@ -1,0 +1,3 @@
+Model,Best Accuracy,Final Accuracy,Best Epoch
+SquirrelCNN,0.3182,0.2788,8
+SquirrelEfficientNet,0.8818,0.8788,7
