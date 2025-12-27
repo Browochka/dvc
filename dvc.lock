@@ -1,0 +1,33 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python train.py
+    deps:
+    - path: data/processed/train.csv
+      hash: md5
+      md5: f3d8bf9ef19e1583c5a5fdf6a269b2e2
+      size: 96227
+    - path: data/processed/val.csv
+      hash: md5
+      md5: d11ba3575eab17b9eebd38a87e22f747
+      size: 11997
+    - path: train.py
+      hash: md5
+      md5: d30c9e392676fcebb4f6f609a35f0931
+      size: 4651
+    params:
+      params.yaml:
+        model.num_classes: 5
+        training.batch_size: 32
+        training.epochs: 7
+        training.lr: 0.001
+        training.test_size: 0.1
+    outs:
+    - path: metrics.json
+      hash: md5
+      md5: face838ae67f719859730fb55a42716f
+      size: 91
+    - path: models/SquirrelEff.pth
+      hash: md5
+      md5: a5bbcdb0067e755bffd35cde3c83cf3e
+      size: 18968619
